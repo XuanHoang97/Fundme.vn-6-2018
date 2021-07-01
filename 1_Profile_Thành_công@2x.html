@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trang chủ</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/hiep.css" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    
+</head>
+<body>
+	 <header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar">
+      <div class="container">
+        <a href=""><img src="img/svg/menu.svg" class="menu" id="ic_menu"></a>
+        <button class="navbar-toggler btn_menu " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">                
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link item_project" href="#">Dự án</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link item_social" href="#">Trách nhiệm xã hội</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link item_reword" href="#">Phần thưởng/Quà tri ân</a>
+            </li>
+            <li>
+              <a class="navbar-brand logo" href="#">
+                <img src="img/svg/icons/ic_logo.svg" alt="Fundme.vn">
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="#" class="nav-link btn btn-primary btn-sm no-shadow start_proj" >
+                Khởi tạo dự án
+              </a>
+            </li>
+
+            <!-- Tin nhắn popover -->
+            <li class="nav-item item_popover mess"  >
+              <!-- Popover tin nhắn, data-html='true': Chèn các thẻ html vào nội dung -->
+              <a href="#" class="nav-link" data-toggle="popover" 
+
+                title="<b class='title'>Chưa đọc (1) </b> 
+                <a href='' class='float-right new_mess'>Tin nhắn mới</a>" 
+
+                data-html="true" 
+                data-content="
+                <div style='background:#e3f3f7'>
+                 <img src='img/avatars/3.png' class='avatars ' >
+                 <b>Anh em HPVN</b> 
+                 <i class='fas fa-users'></i> &nbsp 
+                 <small> 21:34 14/07/2018 </small>
+                 <br><span class='mess'>Tối nay định ntn ae nhể ?</span><hr>
+               </div>
+
+
+               <img src='img/avatars/3.png' class='avatars' >
+               <b>Hội nghe nhạc</b> 
+               <i class='fas fa-users' style='color:blue'></i> 
+               &nbsp <small> 21:34 14/07/2018 </small>
+               <br>
+               <span class='mess'>Tin nhắn ở nhóm hihi</span><hr>
+
+               <img src='img/avatars/3.png' class='avatars' > 
+               <b>SơnPH</b>
+               &nbsp <small> 21:34 14/07/2018 </small>
+               <br>
+               <span class='mess'>Đặt cửa nào đây ?</span><hr>
+
+               <img src='img/avatars/3.png' class='avatars' > 
+               <b>SơnPH</b>
+               &nbsp <small> 21:34 14/07/2018 </small>
+               <br>
+               <span class='mess'>What do you mean ?</span><hr>  
+
+               <a href='#'class='ml-3'>Xem tất cả</a>
+               <a href='#' class='float-right mr-3'>Đánh dấu tất cả là đã đọc</a>
+
+               " data-placement="bottom">
+
+               <i class="far fa-comments"></i>
+               <span class="badge" >4</span>
+              </a>
+            </li>
+
+            <!-- Popover thông báo -->
+            <li class="nav-item item_popover mess"  >
+              <!-- notification -->
+              <a href="#" class="nav-link  " data-toggle="popover"  
+                  title="<b style='font-weight:bold'>Thông báo</b> 
+                  <a href='' class='float-right setting'>Cài đặt</a>
+                  <a href='' class='float-right Tick_read'>Đánh dấu tất cả là đã đọc</a>
+                  " 
+                  data-html="true"    
+
+                  data-content="
+                    <div style='background:#e3f3f7; ' class='notification_body'>
+                       <hr>
+                       <img src='img/avatars/3.png' class='avatars'>
+                       <b>Xuân Hoàng</b> 
+                       <span>đã đăng 1 video trong 
+                         <b class='name_group' >K57-Đại Học Thủy Lợi</b><br>
+                       </span>                 
+                       <i class='fas fa-users group ml-4 '></i> &nbsp <small> 1 tỷ năm trước</small>
+                       <hr>
+                     </div>
+
+                     <div class='notification_body'>
+                       <hr>
+                       <img src='img/avatars/3.png' class='avatars'>
+                       <b>Xuân Hoàng</b> 
+                       <span> thích 1 video trong 
+                         <b class='name_group' >K57-Đại Học Thủy Lợi</b><br>
+                       </span>                 
+                       <i class='fas fa-users group ml-4 '></i> &nbsp <small> 1 tỷ năm trước</small>
+                       <hr>
+                     </div>
+
+                     <div class='notification_body'>
+                       <hr>
+                       <img src='img/avatars/3.png' class='avatars'>
+                       <b>Xuân Hoàng</b> 
+                       <span>đã bình luận 1 video trong 
+                         <b class='name_group' >K57-Đại Học Thủy Lợi</b><br>
+                       </span>                 
+                       <i class='fas fa-users group ml-4 '></i> &nbsp <small> 1 tỷ năm trước</small>
+                       <hr>
+                     </div>
+                      
+                      <center><a href='#'class='ml-3'>Xem tất cả</a></center>
+
+               " data-placement="bottom">
+                 <i class="far fa-bell" ></i>
+                 <span class="badge">3</span> 
+                </a>  
+            </li>
+
+            
+
+            <li class="nav-item mr-1">
+              <a href="#" class="nav-link">
+                <img src="img/avatars/3.png" class="avatars "> Hoàng
+              </a>
+            </li>
+
+            <li class="nav-item ml-1"> 
+              <form id="demo-2">
+                  <input type="search" placeholder="Search">
+              </form>
+            </li>
+
+          </ul>
+        </div>
+      </div>  
+    </nav>
+  </header>
+    <br>
+	<!-- Content -->
+    <main>
+        <!-- Profile -->
+         <div class="breadcrumb white">
+            <div class="container">
+                <a href="#">Trang chủ</a>
+                <span class="ml-2 mr-2">»</span>
+                <a href="#">Cá nhân</a>
+            </div>
+        </div>
+        <div class="title-header">
+            <div class="container pt-3 pb-3">
+               <div class="row"> 
+                     <div class="col-md-2 col-sm-12 col-xs-12 ">
+                        <img src="img/icon-hoso.jpg">
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 Zdenko pt-2">
+                        <h5>Zdenko Bernhard</h5>
+                         <p>
+                             <a href="#"><img src="img/svg/icons/ic_fb.svg"></a>
+                             <a class="ml-2" href="#"><img src="img/svg/icons/ic_insta.svg"></a>
+                             <a class="ml-2" href="#"><img src="img/svg/icons/ic_zalo.svg"></a>
+                             </p>
+                             <p class="pt-3">www.mywebsite.com</p>
+                    </div>
+                     <div class="col-md-7 mt-4">
+                            <button class="pull-right btn" value="Gửi"><b>198</b><br><span>Followers</span></button>
+                        <button class="pull-right btn"><b>198</b><br><span>Followers</span></button>
+                     </div>
+               </div>
+            </div>
+        </div>
+        <!-- main profile -->
+        <div class=" container">
+            <div class="row">
+                <!-- menu doc -->
+                    <div class="nav-side-menu ml-3 col-md-3 col-xs-12 col-sm-12 mt-3 pt-3">
+                        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+                      
+                            <div class="menu-list">
+                      
+                                <ul id="menu-content" class="menu-content collapse out">
+                                    <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                                      <a href="#">Dự án của tôi<span class="arrow"></span></a>
+                                    </li>
+                                    <ul class="sub-menu collapse" id="products">
+                                        <li class="active menu" data-target="#products"><a href="#">Nháp (2)</a></li>
+                                        <li><a href="#" class="menu" data-target="#products">Đã ủng hộ</a></li>
+                                        <li><a href="#" class="menu" data-target="#products">Đang tiến hành</a></li>
+                                        <li style="border:none;"><a href="#" class="menu" data-target="#products">Thành công</a></li>
+                                    </ul>
+
+
+                                    <li>
+                                      <a href="#" class="menu" data-target="#products">Dự án tài trợ</span></a>
+                                    </li>  
+                                   
+                                    <li>
+                                      <a href="#" class="menu" data-target="#products"></i>Thông kê</span></a>
+                                    </li>
+                                 
+                                     <li>
+                                      <a href="#" class="menu" data-target="#products">Theo dõi đơn hàng
+                                      </a>
+                                      </li>
+
+                                     <li>
+                                      <a href="#" class="menu" data-target="#products">Hồ sơ của tôi
+                                      </a>
+                                    </li> 
+                                    <li>
+                                      <a href="#" class="menu" data-target="#products">Cài đặt
+                                      </a>
+                                    </li> 
+                                    <li>
+                                      <a href="#" class="menu" data-target="#products">Đăng xuất
+                                      </a>
+                                    </li>
+                                </ul>
+                         </div>
+                    </div> 
+                <!-- end menu doc -->
+                <!-- profile thành công -->
+                <div class="col-md-8">
+                    <div class="profile  mt-3 pt-3 ">
+                        <h6 style="font-weight: bold; color: #4b98ff">DỰ ÁN THÀNH CÔNG <i class="fa fa-check-circle"></i></h6>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img class="img" src="img/home2.png">
+                                <div class="row mt-2">
+                                    <div class="col-md-3 mt-2 pl-3">
+                                        <label class="gray">Tài trợ</label>
+                                    </div>
+                                    <div class="col-md-8 ml-2">
+                                        <div class="row p0">
+                                            <div class="col p0 m-1">
+                                                <img class="img img-thumbnail" src="img/partners/1.png">
+                                            </div>
+                                            <div class="col p0 m-1">
+                                                <img class="img img-thumbnail" src="img/partners/2.png">
+                                            </div>
+                                            <div class="col p0 m-1">
+                                                <img class="img img-thumbnail" src="img/partners/3.png">
+                                            </div>
+                                        </div>               
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-7 p0">
+                                <div class="col-md-12">
+                                    <label class="bold">First charity activity of this summer</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <span>Far far away, behind the word mountains, far from the countries Vokalia and Consonatia, there live the blind texts.</span>
+                                </div>
+                                <div class="row pt-2 pl-3 pr-3">
+                                    <div class="col-md-12 mb-0" style="height: 15px">
+                                        <label class="gray" style="font-size: 12px">Đã ủng hộ</label>
+                                    </div>
+                                    <div class="col-md-12 mb-0">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label style="color: #4b98ff; font-size: 25px" class="bold">20.140.000 đ</label>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <label style="font-size: 25px" class="gray">39%</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <div class="col-md-4">
+                                        <div class="col-md-12">
+                                            <label class="gray mb-0" style="font-size: 12px;">Mục tiêu</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="bold gray">60.000.000 đ</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="col-md-12">
+                                            <label class="gray mb-0" style="font-size: 12px;">Thời gian còn lại</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="bold gray">15 ngày</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                            <div class="col-md-12">
+                                                <label class="gray mb-0" style="font-size: 12px;">Link</label>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <a href="#" class="bold" style="text-decoration: underline">Thống kê</a>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="col-md-12">
+                                            <label class="gray mb-0" style="font-size: 12px;">Số lượt ủng hộ</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="bold gray">21</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="col-md-12">
+                                            <label class="gray mb-0" style="font-size: 12px;">Bắt đầu từ</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="bold gray">12/04/2018</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                        <hr>
+                    </div>
+                </div>  
+				<!-- end profile thành công -->
+            </div>
+        </div>
+        <!-- End Profile -->
+        
+        <!--PROJECTS-->
+        <div class="project-list mt-5">
+            <div class="container">
+            <div class="project-list-header clearfix">
+                <!-- left -->
+                <div class="float-left">
+                    <h3 class="h5 dark-grey-text float-left">DỰ ÁN ĐƯỢC QUAN TÂM</h3>
+                    <ul class="list-inline float-left mt-1">
+                        <li class="list-inline-item"><a href="#" class="h6 primary-text ml-4">SÁCH</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="h6 primary-text ml-4">ÂM NHẠC</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="h6 primary-text ml-4">SÁNG TẠO</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End left -->
+                <!-- right -->
+                <div class="float-right">
+                    <button class="btn mb-4 float-left left-click px-5"><a href="#" class=" primary-text align-content-center"> Xem tất cả</a>
+                    </button>
+                    <div class="list-inline float-left right-click ">
+                        <a href="#" class="btn btn-sm left ">
+                            <p><i class="fas fa-chevron-left"></i>
+                            </p>
+                        </a>
+                        <a href="#" class="btn btn-sm right">
+                            <p><i class="fas fa-chevron-right"></i>
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- End right -->
+
+            </div>
+            <div class="row project-grid mt-2">
+                <!--item-->
+                <div class="project-item col-md-4 mb-3">
+                    <div class="white z-depth-1">
+                        <div class="project-item-img">
+                            <a href="#"><img src="img/home2.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="p-3">
+                            <div class="tag-line">
+                                <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                <a href="#" class="btn btn-light-blue btn-tag no-shadow waves-effect waves-light">Tag</a>
+                            </div>
+                            <div class="prj-brief mt-3">
+                                <h3 class="h6"><a href="#" class="black-text">First charity activity of this summer</a></h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries </p>
+                            </div>
+                            <div class="prj-progress-bar mt-5">
+                                <div class="primary" style="height: 5px;">&nbsp;</div>
+                            </div>
+                            <div class="money-progress mt-3 clearfix">
+                                <div class="current-money float-left">
+                                    <small class="grey-text">Đã ủng hộ</small>
+                                    <br>
+                                    <strong class="h5 primary-text">91.239.000 đ</strong>
+
+
+                                </div>
+                                <div class="target-money text-right float-right">
+                                    <small class="grey-text">Mục tiêu</small>
+                                    <br>
+                                    <strong class="h5 grey-text">150.000.000 đ</strong>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end item-->
+
+                <!--item-->
+                <div class="project-item col-md-4 mb-3">
+                    <div class="white z-depth-1">
+                        <div class="project-item-img">
+                            <a href="#"><img src="img/home3.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="p-3">
+                            <div class="tag-line">
+                                <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                            </div>
+                            <div class="prj-brief mt-3">
+                                <h3 class="h6"><a href="#" class="black-text">Building clean-water system for rural poor</a></h3>
+                                <p>It's by far the hardest thing I've ever done, to be so in love with you and so alone. Follow me where I go, what I do and who I know, make it part of you to be a part of me.</p>
+                            </div>
+                            <div class="prj-progress-bar mt-5">
+                                <div class="primary" style="height: 5px;">&nbsp;</div>
+                            </div>
+                            <div class="money-progress mt-3 clearfix">
+                                <div class="current-money float-left">
+                                    <small class="grey-text">Đã ủng hộ</small>
+                                    <br>
+                                    <strong class="h5 primary-text">624.280.000đ</strong>
+
+
+                                </div>
+                                <div class="target-money text-right float-right">
+                                    <small class="grey-text">Mục tiêu</small>
+                                    <br>
+                                    <strong class="h5 grey-text">460.000.000đ</strong>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end item-->
+
+                <!--item-->
+                <div class="project-item col-md-4 mb-3">
+                    <div class="white z-depth-1">
+                        <div class="project-item-img">
+                            <a href="#"><img src="img/home4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="p-3">
+                            <div class="tag-line">
+                                <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                            </div>
+                            <div class="prj-brief mt-3">
+                                <h3 class="h6"><a href="#" class="black-text">Baby charity: build school for poor children</a></h3>
+                                <p>It's by far the hardest thing I've ever done, to be so in love with you and so alone. Follow me where I go, what I do and who I know, make it part of you to be a part of me.</p>
+                            </div>
+                            <div class="prj-progress-bar mt-5">
+                                <div class="primary" style="height: 5px;">&nbsp;</div>
+                            </div>
+                            <div class="money-progress mt-3 clearfix">
+                                <div class="current-money float-left">
+                                    <small class="grey-text">Đã ủng hộ</small>
+                                    <br>
+                                    <strong class="h5 primary-text">20.140.000đ</strong>
+
+
+                                </div>
+                                <div class="target-money text-right float-right">
+                                    <small class="grey-text">Mục tiêu</small>
+                                    <br>
+                                    <strong class="h5 grey-text">60.000.000đ</strong>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end item-->
+            </div>
+        </div>
+        </div>
+    </main>
+        <!--PARTNERS-->
+                <div class="partners white border border-left-0 border-right-0 pt-4 pb-4">
+                    <div class="container">
+                        <h4 class="h4 dark-grey-text text-center">ĐỐI TÁC & NHÀ TÀI TRỢ</h4>
+                        <div class="row mt-5">
+                           <div class="owl-carousel owl-theme">
+                                <div class="item"><img src="img/partners/1.png" alt="flower1" class=""></div>
+                                <div class="item"><img src="img/partners/2.png" alt="flower2"></div>
+                                <div class="item"><img src="img/partners/3.png" alt="flower3"></div>
+                                <div class="item"><img src="img/partners/4.png" alt="flower4">
+                                </div>  
+                                <div class="item"><img src="img/partners/1.png" alt="flower1" class=""></div>
+                                <div class="item"><img src="img/partners/2.png" alt="flower2"></div>
+                                <div class="item"><img src="img/partners/3.png" alt="flower3"></div>
+                                <div class="item"><img src="img/partners/4.png" alt="flower4">
+                                </div>  
+                                <div class="item"><img src="img/partners/1.png" alt="flower1" class=""></div>
+                                <div class="item"><img src="img/partners/2.png" alt="flower2"></div>
+                                <div class="item"><img src="img/partners/3.png" alt="flower3"></div>
+                                <div class="item"><img src="img/partners/4.png" alt="flower4"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!--PARTNERS-->
+    <!--End-PROJECTS-->
+    <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="email">
+                            <div class="module-content">
+                                <p><img src="img/svg/icons/ic_logo.svg"></p>                     
+                                <p class="dark-grey-text">Fundme 2012 - 2018</p>
+                                <div class="form-group">
+                                    <input type="email" id="defaultFormEmailEx" class="" placeholder="Please enter your email">
+                                    <button class="btn-primary">
+                                        <img src="img/svg/icons/ic_env.svg">
+                                    </button>
+                                </div>
+                                <div class="mt-3">
+                                    <img src="img/bct.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="module">
+                            <h3 class="h3 primary-text">VỀ CHÚNG TÔI</h3>
+                            <div class="module-content">
+                                <ul class="list-unstyled menu">
+                                    <li><a href="#">Dự án</a></li>
+                                    <li><a href="#">Trách hiệm xã hội</a></li>
+                                    <li><a href="#">Qùa tri ân</a></li>
+                                    <li><a href="#">Dự án </a></li>
+                                    <li><a href="#">Trách hiệm xã hội</a></li>
+                                    <li><a href="#">Trách hiệm xã hội</a></li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="module">
+                            <h3 class="h3 primary-text">VỀ CHÚNG TÔI</h3>
+                            <div class="module-content">
+                                <ul class="list-unstyled menu">
+                                    <li><a href="#">Fundme là gì?</a></li>
+                                    <li><a href="#">Doanh nghiệp tài trợ</a></li>
+                                    <li><a href="#">Dự án đặc biệt</a></li>
+                                    <li><a href="#">Dự án phục trách</a></li>
+                                    <li><a href="#">Đối tác truyền thông và marketing</a></li>
+                                    <li><a href="#">Trách hiệm xã hội</a></li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="module">
+                            <h3 class="h3 primary-text">LIÊN HỆ</h3>
+                            <div class="module-content">
+                                <h5 class="h5">0972175224</h5>
+                                <p><small>prospekt Mira 19<br>
+                                builing 3,floor 3</small></p>
+                                <p><small>Working hours:<br>mon-fri from 11:00 to 20:00 / sat from<br>11:00 to 18:00<br>sunday is a day off</small></p>
+                                <p>
+                                    <a href="#"><img src="img/svg/icons/ic_fb.svg"></a>
+                                    <a class="ml-2" href="#"><img src="img/svg/icons/ic_insta.svg"></a>
+                                    <a class="ml-2" href="#"><img src="img/svg/icons/ic_zalo.svg"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script type="text/javascript " src="js/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,866 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trang chủ</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/hiep.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
+</head>
+<body>
+     <header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar">
+      <div class="container">
+        <a href=""><img src="img/svg/menu.svg" class="menu" id="ic_menu"></a>
+        <button class="navbar-toggler btn_menu " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">                
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link item_project" href="#">Dự án</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link item_social" href="#">Trách nhiệm xã hội</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link item_reword" href="#">Phần thưởng/Quà tri ân</a>
+            </li>
+            <li>
+              <a class="navbar-brand logo" href="#">
+                <img src="img/svg/icons/ic_logo.svg" alt="Fundme.vn">
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="#" class="nav-link btn btn-primary btn-sm no-shadow start_proj" >
+                Khởi tạo dự án
+              </a>
+            </li>
+
+            <!-- Tin nhắn popover -->
+            <li class="nav-item item_popover mess"  >
+              <!-- Popover tin nhắn, data-html='true': Chèn các thẻ html vào nội dung -->
+              <a href="#" class="nav-link" data-toggle="popover" 
+
+                title="<b class='title'>Chưa đọc (1) </b> 
+                <a href='' class='float-right new_mess'>Tin nhắn mới</a>" 
+
+                data-html="true" 
+                data-content="
+                <div style='background:#e3f3f7'>
+                 <img src='img/avatars/3.png' class='avatars ' >
+                 <b>Anh em HPVN</b> 
+                 <i class='fas fa-users'></i> &nbsp 
+                 <small> 21:34 14/07/2018 </small>
+                 <br><span class='mess'>Tối nay định ntn ae nhể ?</span><hr>
+               </div>
+
+
+               <img src='img/avatars/3.png' class='avatars' >
+               <b>Hội nghe nhạc</b> 
+               <i class='fas fa-users' style='color:blue'></i> 
+               &nbsp <small> 21:34 14/07/2018 </small>
+               <br>
+               <span class='mess'>Tin nhắn ở nhóm hihi</span><hr>
+
+               <img src='img/avatars/3.png' class='avatars' > 
+               <b>SơnPH</b>
+               &nbsp <small> 21:34 14/07/2018 </small>
+               <br>
+               <span class='mess'>Đặt cửa nào đây ?</span><hr>
+
+               <img src='img/avatars/3.png' class='avatars' > 
+               <b>SơnPH</b>
+               &nbsp <small> 21:34 14/07/2018 </small>
+               <br>
+               <span class='mess'>What do you mean ?</span><hr>  
+
+               <a href='#'class='ml-3'>Xem tất cả</a>
+               <a href='#' class='float-right mr-3'>Đánh dấu tất cả là đã đọc</a>
+
+               " data-placement="bottom">
+
+               <i class="far fa-comments"></i>
+               <span class="badge" >4</span>
+              </a>
+            </li>
+
+            <!-- Popover thông báo -->
+            <li class="nav-item item_popover mess"  >
+              <!-- notification -->
+              <a href="#" class="nav-link  " data-toggle="popover"  
+                  title="<b style='font-weight:bold'>Thông báo</b> 
+                  <a href='' class='float-right setting'>Cài đặt</a>
+                  <a href='' class='float-right Tick_read'>Đánh dấu tất cả là đã đọc</a>
+                  " 
+                  data-html="true"    
+
+                  data-content="
+                    <div style='background:#e3f3f7; ' class='notification_body'>
+                       <hr>
+                       <img src='img/avatars/3.png' class='avatars'>
+                       <b>Xuân Hoàng</b> 
+                       <span>đã đăng 1 video trong 
+                         <b class='name_group' >K57-Đại Học Thủy Lợi</b><br>
+                       </span>                 
+                       <i class='fas fa-users group ml-4 '></i> &nbsp <small> 1 tỷ năm trước</small>
+                       <hr>
+                     </div>
+
+                     <div class='notification_body'>
+                       <hr>
+                       <img src='img/avatars/3.png' class='avatars'>
+                       <b>Xuân Hoàng</b> 
+                       <span> thích 1 video trong 
+                         <b class='name_group' >K57-Đại Học Thủy Lợi</b><br>
+                       </span>                 
+                       <i class='fas fa-users group ml-4 '></i> &nbsp <small> 1 tỷ năm trước</small>
+                       <hr>
+                     </div>
+
+                     <div class='notification_body'>
+                       <hr>
+                       <img src='img/avatars/3.png' class='avatars'>
+                       <b>Xuân Hoàng</b> 
+                       <span>đã bình luận 1 video trong 
+                         <b class='name_group' >K57-Đại Học Thủy Lợi</b><br>
+                       </span>                 
+                       <i class='fas fa-users group ml-4 '></i> &nbsp <small> 1 tỷ năm trước</small>
+                       <hr>
+                     </div>
+                      
+                      <center><a href='#'class='ml-3'>Xem tất cả</a></center>
+
+               " data-placement="bottom">
+                 <i class="far fa-bell" ></i>
+                 <span class="badge">3</span> 
+                </a>  
+            </li>
+
+            
+
+            <li class="nav-item mr-1">
+              <a href="#" class="nav-link">
+                <img src="img/avatars/3.png" class="avatars "> Hoàng
+              </a>
+            </li>
+
+            <li class="nav-item ml-1"> 
+              <form id="demo-2">
+                  <input type="search" placeholder="Search">
+              </form>
+            </li>
+
+          </ul>
+        </div>
+      </div>  
+    </nav>
+  </header>
+    <br>
+    <!-- Content -->
+    <main>
+        <!-- Profile -->
+        <div class="breadcrumb white">
+            <div class="container">
+                <a href="#">Trang chủ</a>
+                <span class="ml-2 mr-2">»</span>
+                <a href="#">Cá nhân</a>
+            </div>
+        </div>
+        <div class="title-header">
+            <div class="container pt-3 pb-3">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12 col-xs-12 ">
+                        <img src="img/icon-hoso.jpg">
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 Zdenko pt-2">
+                        <h5>Zdenko Bernhard</h5>
+                        <p>
+                            <a href="#"><img src="img/svg/icons/ic_fb.svg"></a>
+                            <a class="ml-2" href="#"><img src="img/svg/icons/ic_insta.svg"></a>
+                            <a class="ml-2" href="#"><img src="img/svg/icons/ic_zalo.svg"></a>
+                        </p>
+                        <p class="pt-3">www.mywebsite.com</p>
+                    </div>
+                    <div class="col-md-7 mt-4">
+                        <button class="pull-right btn" value="Gửi"><b>198</b><br><span>Followers</span></button>
+                        <button class="pull-right btn"><b>198</b><br><span>Followers</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main profile -->
+        <div class=" container">
+            <div class="row">
+                <!-- menu doc -->
+                <div class="nav-side-menu ml-3 col-md-3 col-xs-12 col-sm-12 mt-3 pt-3">
+                    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+                    <div class="menu-list">
+
+                        <ul id="menu-content" class="menu-content collapse out">
+                            <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                                <a href="#">Dự án của tôi<span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="products">
+                                <li class="active menu" data-target="#products"><a href="#">Nháp (2)</a></li>
+                                <li><a href="#" class="menu" data-target="#products">Đã ủng hộ</a></li>
+                                <li><a href="#" class="menu" data-target="#products">Đang tiến hành</a></li>
+                                <li style="border:none;"><a href="#" class="menu" data-target="#products">Thành công</a></li>
+                            </ul>
+
+
+                            <li>
+                                <a href="#" class="menu" data-target="#products">Dự án tài trợ</span></a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu" data-target="#products"></i>Thông kê</span></a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu" data-target="#products">
+                                    Theo dõi đơn hàng
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu" data-target="#products">
+                                    Hồ sơ của tôi
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu" data-target="#products">
+                                    Cài đặt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu" data-target="#products">
+                                    Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end menu doc -->
+                <!-- Qua tri an-->
+
+                <div class="col-md-8">
+                    <div class="list-follow">
+                        <h2>THỐNG KÊ</h2>
+                        <div class="row follow-time">
+                            <div class="col-md-4 nopadding">
+                                <form action="" class="form-horizontal" method="post">
+
+                                    <div class="form-group ">
+
+                                        <div class="calendar-icon">
+                                            <label class="control-label requiredField" for="date">
+                                                Thời gian bắt đầu
+                                            </label>
+                                            <input id="date-start" name="date-start" placeholder="MM/DD/YYYY" type="text" />
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4 nopadding">
+                                <form action="" class="form-horizontal" method="post">
+
+                                    <div class="form-group ">
+
+                                        <div class="calendar-icon">
+                                            <label class="control-label requiredField" for="date">
+                                                Thời gian kết thúc
+                                            </label>
+                                            <input id="date-end" name="date-end" placeholder="MM/DD/YYYY" type="text" />
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                            <div class="col-md-4 nopadding search-box2">
+                                <div class="search-contain">
+                                    <form action="">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                        <input type="text" placeholder="Search.." name="search">
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                      <!--  Quỳnh sửa-->
+                        <div class="follow-items">
+                            <div class="menu-statistical nav-tabs-responsive">
+                                <ul class="nav nav-tabs">
+                                    <li class="active1 col-sm-5 col-lg-4"><a data-toggle="tab" href="#home"><i class="fas fa-gift"></i> QUÀ TRI ÂN </a></li>
+                                    <li class="col-sm-7 col-lg-6"><a data-toggle="tab" href="#menu1"><i class="far fa-eye">&nbsp;</i>LƯỢT VIEW/ỦNG HỘ DỰ ÁN</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="home" class="tab-pane active">
+                                        <div class="item-follow">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered" style="border-top: 1px solid #eee;">
+                                                    <tr style="white-space: nowrap;">
+                                                        <th class="text-center">STT</th>
+                                                        <th class="text-center">Quà tri ân</th>
+                                                        <th class="text-center">Tổng</th>
+                                                        <th class="text-center">Đã ủng hộ</th>
+                                                        <th class="text-center">Còn lại</th>
+                                                        <th class="text-center">Dự án</th>
+                                                        <th class="text-center">Chi tiết</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="1" class="text-center">1</td>
+                                                        <td class="follow-img text-center">
+                                                            <img src="img/item1.jpg" alt="item 1" /><br /><br />
+                                                            <h4 class="text-center">Sách: ĐẮC NHÂN TÂM</h4>
+                                                            <span class="text-center">Mã quà tri ân:#4556032</span>
+                                                        </td>
+                                                        <td rowspan="1" class="text-center">100</td>
+                                                        <td rowspan="1" class="text-center">70</td>
+                                                        <td rowspan="1" class="text-center">30</td>
+                                                        <td rowspan="2" class="text-center">Fundme.vn</td>
+                                                        <td rowspan="2" class="text-center"><a><u class="text-primary">Link dự án</u></a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="menu1" class="tab-pane fade">
+                                        <form class="form-horizontal">
+                                            <div class="form-body">
+                                                <div class="form-group">
+                                                    <label class="control-label select-project-col-lg-2 float-left pt-2">Chọn dự án</label>
+                                                    <div class="col-lg-9 float-left">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group pt50">
+                                                    <label class="label-from-date-col-lg-2 float-left pt-1">Thời gian bắt đầu</label>
+                                                    <div class="input-date-col-lg-2 float-left">
+                                                        <div class="inner-addon left-addon">
+                                                            <i class="fa fa-calendar" style="color:#2F80ED"></i>
+                                                            <input id="fromdate" name="fromdate" type="text" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <label class="label-to-date-col-lg-2 float-left pt-1">Thời gian kết thúc</label>
+                                                    <div class="input-date-col-lg-2  float-left">
+                                                        <div class="inner-addon left-addon">
+                                                            <i class="fa fa-calendar" style="color:#2F80ED"></i>
+                                                            <input id="todate" name="todate" type="text" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class=" float-left search-statistical">
+                                                        <div class="inner-addon left-addon">
+                                                            <i class="fa fa-search"></i>
+                                                            <input type="text" class="form-control search-reward" placeholder="Tìm kiếm tên dự án,phần thưởng..." />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group pt50">
+                                                    <div class="col-md-4 float-left statisticCheckBox">
+                                                        <div class="radiogreen radio-info">
+                                                            <input type="radio" id="inlineRadio1" value="option1" name="radioInline">
+                                                            <label for="inlineRadio1"> Dự án đang tiến hành </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 float-left">
+                                                        <div class="radiogreen radio-info">
+                                                            <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                                            <label for="inlineRadio2"> Dự án thành công </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 float-left">
+                                                        <div class="radiogreen radio-info">
+                                                            <input type="radio" id="inlineRadio3" value="option1" name="radioInline">
+                                                            <label for="inlineRadio3"> Dự án dừng lại </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group pt50">
+                                                    <div class="col-lg-8 float-left">
+                                                        <canvas id="line-chart" width="900" height="450"></canvas>
+                                                        <div class="text-center pb30 pt30">
+                                                            <b style="font-weight:bold">Biểu đồ thống kê</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 float-left">
+                                                        <div class="pt30">
+                                                            <div class="checkboxgreen">
+                                                                <input id="checkbox1" type="checkbox">
+                                                                <label for="checkbox1">
+                                                                    Tất cả
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkboxgreen">
+                                                                <input id="checkbox2" type="checkbox">
+                                                                <label for="checkbox2">
+                                                                    Lượt View
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkboxgreen">
+                                                                <input id="checkbox3" type="checkbox">
+                                                                <label for="checkbox3">
+                                                                    Lượt Share
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkboxgreen">
+                                                                <input id="checkbox4" type="checkbox">
+                                                                <label for="checkbox4">
+                                                                    Lượt Comment
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkboxgreen">
+                                                                <input id="checkbox5" type="checkbox">
+                                                                <label for="checkbox5">
+                                                                    Số người ủng hộ
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkboxgreen">
+                                                                <input id="checkbox1" type="checkbox">
+                                                                <label for="checkbox1">
+                                                                    Số gói ủng hộ
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkboxgreen">
+                                                                <input id="checkbox6" type="checkbox">
+                                                                <label for="checkbox6">
+                                                                    Số gói tiền
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group pt50">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered" style="border-top: 1px solid #eee;">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="bold" scope="col">Ngày</th>
+                                                                    <th class="bold" scope="col">Số khách thăm</th>
+                                                                    <th class="bold" scope="col">Số view</th>
+                                                                    <th class="bold" scope="col">Lượt ủng hộ</th>
+                                                                    <th class="bold" scope="col">Số người ủng hộ</th>
+                                                                    <th class="bold" scope="col">Số người bình luận</th>
+                                                                    <th class="bold" scope="col">Số huy động</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>21/02/2018</th>
+                                                                    <td>100</td>
+                                                                    <td>50</td>
+                                                                    <td>23</td>
+                                                                    <td>2</td>
+                                                                    <td>5</td>
+                                                                    <td>200,000,000đ</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>22/02/2018</th>
+                                                                    <td>200</td>
+                                                                    <td>56</td>
+                                                                    <td>23</td>
+                                                                    <td>2</td>
+                                                                    <td>5</td>
+                                                                    <td>200,000đ</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th >23/02/2018</th>
+                                                                    <td>200</td>
+                                                                    <td>56</td>
+                                                                    <td>23</td>
+                                                                    <td>2</td>
+                                                                    <td>5</td>
+                                                                    <td>450,000,000đ</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <!-- end-Quỳnh sửa-->
+                    </div>
+                    <!-- end Qua tri an-->
+                </div>
+            </div>
+            <!-- End Profile -->
+            <!--PROJECTS-->
+            <div class="project-list mt-5">
+                <div class="container">
+                    <div class="project-list-header clearfix">
+                        <!-- left -->
+                        <div class="float-left">
+                            <h3 class="h5 dark-grey-text float-left">DỰ ÁN ĐƯỢC QUAN TÂM</h3>
+                            <ul class="list-inline float-left mt-1">
+                                <li class="list-inline-item">
+                                    <a href="#" class="h6 primary-text ml-4">SÁCH</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="h6 primary-text ml-4">ÂM NHẠC</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="h6 primary-text ml-4">SÁNG TẠO</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End left -->
+                        <!-- right -->
+                        <div class="float-right">
+                            <button class="btn mb-4 float-left left-click px-5">
+                                <a href="#" class=" primary-text align-content-center"> Xem tất cả</a>
+                            </button>
+                            <div class="list-inline float-left right-click ">
+                                <a href="#" class="btn btn-sm left ">
+                                    <p>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </p>
+                                </a>
+                                <a href="#" class="btn btn-sm right">
+                                    <p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- End right -->
+
+                    </div>
+                    <div class="row project-grid mt-2">
+                        <!--item-->
+                        <div class="project-item col-md-4 mb-3">
+                            <div class="white z-depth-1">
+                                <div class="project-item-img">
+                                    <a href="#">
+                                        <img src="img/home2.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="p-3">
+                                    <div class="tag-line">
+                                        <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                        <a href="#" class="btn btn-light-blue btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                    </div>
+                                    <div class="prj-brief mt-3">
+                                        <h3 class="h6"><a href="#" class="black-text">First charity activity of this summer</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries </p>
+                                    </div>
+                                    <div class="prj-progress-bar mt-5">
+                                        <div class="primary" style="height: 5px;">&nbsp;</div>
+                                    </div>
+                                    <div class="money-progress mt-3 clearfix">
+                                        <div class="current-money float-left">
+                                            <small class="grey-text">Đã ủng hộ</small>
+                                            <br>
+                                            <strong class="h5 primary-text">91.239.000 đ</strong>
+
+
+                                        </div>
+                                        <div class="target-money text-right float-right">
+                                            <small class="grey-text">Mục tiêu</small>
+                                            <br>
+                                            <strong class="h5 grey-text">150.000.000 đ</strong>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end item-->
+                        <!--item-->
+                        <div class="project-item col-md-4 mb-3">
+                            <div class="white z-depth-1">
+                                <div class="project-item-img">
+                                    <a href="#">
+                                        <img src="img/home3.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="p-3">
+                                    <div class="tag-line">
+                                        <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                        <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                    </div>
+                                    <div class="prj-brief mt-3">
+                                        <h3 class="h6"><a href="#" class="black-text">Building clean-water system for rural poor</a></h3>
+                                        <p>It's by far the hardest thing I've ever done, to be so in love with you and so alone. Follow me where I go, what I do and who I know, make it part of you to be a part of me.</p>
+                                    </div>
+                                    <div class="prj-progress-bar mt-5">
+                                        <div class="primary" style="height: 5px;">&nbsp;</div>
+                                    </div>
+                                    <div class="money-progress mt-3 clearfix">
+                                        <div class="current-money float-left">
+                                            <small class="grey-text">Đã ủng hộ</small>
+                                            <br>
+                                            <strong class="h5 primary-text">624.280.000đ</strong>
+
+
+                                        </div>
+                                        <div class="target-money text-right float-right">
+                                            <small class="grey-text">Mục tiêu</small>
+                                            <br>
+                                            <strong class="h5 grey-text">460.000.000đ</strong>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end item-->
+                        <!--item-->
+                        <div class="project-item col-md-4 mb-3">
+                            <div class="white z-depth-1">
+                                <div class="project-item-img">
+                                    <a href="#">
+                                        <img src="img/home4.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="p-3">
+                                    <div class="tag-line">
+                                        <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                        <a href="#" class="btn btn-light-grey btn-tag no-shadow waves-effect waves-light">Tag</a>
+                                    </div>
+                                    <div class="prj-brief mt-3">
+                                        <h3 class="h6"><a href="#" class="black-text">Baby charity: build school for poor children</a></h3>
+                                        <p>It's by far the hardest thing I've ever done, to be so in love with you and so alone. Follow me where I go, what I do and who I know, make it part of you to be a part of me.</p>
+                                    </div>
+                                    <div class="prj-progress-bar mt-5">
+                                        <div class="primary" style="height: 5px;">&nbsp;</div>
+                                    </div>
+                                    <div class="money-progress mt-3 clearfix">
+                                        <div class="current-money float-left">
+                                            <small class="grey-text">Đã ủng hộ</small>
+                                            <br>
+                                            <strong class="h5 primary-text">20.140.000đ</strong>
+
+
+                                        </div>
+                                        <div class="target-money text-right float-right">
+                                            <small class="grey-text">Mục tiêu</small>
+                                            <br>
+                                            <strong class="h5 grey-text">60.000.000đ</strong>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end item-->
+                    </div>
+                </div>
+            </div>
+    </main>
+    <!--PARTNERS-->
+    <div class="partners white border border-left-0 border-right-0 pt-4 pb-4">
+        <div class="container">
+            <h4 class="h4 dark-grey-text text-center">ĐỐI TÁC & NHÀ TÀI TRỢ</h4>
+            <div class="row mt-5">
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="img/partners/1.png" alt="flower1" class=""></div>
+                    <div class="item"><img src="img/partners/2.png" alt="flower2"></div>
+                    <div class="item"><img src="img/partners/3.png" alt="flower3"></div>
+                    <div class="item">
+                        <img src="img/partners/4.png" alt="flower4">
+                    </div>
+                    <div class="item"><img src="img/partners/1.png" alt="flower1" class=""></div>
+                    <div class="item"><img src="img/partners/2.png" alt="flower2"></div>
+                    <div class="item"><img src="img/partners/3.png" alt="flower3"></div>
+                    <div class="item">
+                        <img src="img/partners/4.png" alt="flower4">
+                    </div>
+                    <div class="item"><img src="img/partners/1.png" alt="flower1" class=""></div>
+                    <div class="item"><img src="img/partners/2.png" alt="flower2"></div>
+                    <div class="item"><img src="img/partners/3.png" alt="flower3"></div>
+                    <div class="item"><img src="img/partners/4.png" alt="flower4"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--PARTNERS-->
+    <!--End-PROJECTS-->
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="email">
+                        <div class="module-content">
+                            <p><img src="img/svg/icons/ic_logo.svg"></p>
+                            <p class="dark-grey-text">Fundme 2012 - 2018</p>
+                            <div class="form-group">
+                                <input type="email" id="defaultFormEmailEx" class="" placeholder="Please enter your email">
+                                <button class="btn-primary">
+                                    <img src="img/svg/icons/ic_env.svg">
+                                </button>
+                            </div>
+                            <div class="mt-3">
+                                <img src="img/bct.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="module">
+                        <h3 class="h3 primary-text">VỀ CHÚNG TÔI</h3>
+                        <div class="module-content">
+                            <ul class="list-unstyled menu">
+                                <li><a href="#">Dự án</a></li>
+                                <li><a href="#">Trách hiệm xã hội</a></li>
+                                <li><a href="#">Qùa tri ân</a></li>
+                                <li><a href="#">Dự án </a></li>
+                                <li><a href="#">Trách hiệm xã hội</a></li>
+                                <li><a href="#">Trách hiệm xã hội</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="module">
+                        <h3 class="h3 primary-text">VỀ CHÚNG TÔI</h3>
+                        <div class="module-content">
+                            <ul class="list-unstyled menu">
+                                <li><a href="#">Fundme là gì?</a></li>
+                                <li><a href="#">Doanh nghiệp tài trợ</a></li>
+                                <li><a href="#">Dự án đặc biệt</a></li>
+                                <li><a href="#">Dự án phục trách</a></li>
+                                <li><a href="#">Đối tác truyền thông và marketing</a></li>
+                                <li><a href="#">Trách hiệm xã hội</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="module">
+                        <h3 class="h3 primary-text">LIÊN HỆ</h3>
+                        <div class="module-content">
+                            <h5 class="h5">0972175224</h5>
+                            <p>
+                                <small>
+                                    prospekt Mira 19<br>
+                                    builing 3,floor 3
+                                </small>
+                            </p>
+                            <p><small>Working hours:<br>mon-fri from 11:00 to 20:00 / sat from<br>11:00 to 18:00<br>sunday is a day off</small></p>
+                            <p>
+                                <a href="#"><img src="img/svg/icons/ic_fb.svg"></a>
+                                <a class="ml-2" href="#"><img src="img/svg/icons/ic_insta.svg"></a>
+                                <a class="ml-2" href="#"><img src="img/svg/icons/ic_zalo.svg"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript " src="js/js.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var date_input = $('input[name="date-start"]'); //our date input has the name "date"
+            var date_input2 = $('input[name="date-end"]');
+            var date_input3 = $('input[name="fromdate"]');
+            var date_input4 = $('input[name="todate"]');
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            date_input.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+            date_input2.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+
+            date_input3.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+            date_input4.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        })
+
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                datasets: [{
+                    data: [1, 20, 23, 25, 27, 29, 45, 60, 70, 100],
+                    label: "",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }, {
+                    data: [20, 30, 35, 36, 37, 50, 60, 70, 90, 100],
+                    label: "",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                },
+                legend: { display: false }
+            }
+        });
+    </script>
+</body>
+</html>

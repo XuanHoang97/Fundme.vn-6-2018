@@ -1,0 +1,55 @@
+@media (max-width: 1024px){
+	footer .email .module-content div #defaultFormEmailEx {
+		width: 160px ;
+		height: 35px ;
+		font-size: 12px;
+
+	}
+	footer .email .module-content div button{
+		height: 35px;
+		width: 40px;
+	}
+	footer .email .module-content div button img{
+
+	}
+}
+@media (max-width: 990px) and (min-width: 767px){
+	footer .email .module-content div #defaultFormEmailEx {
+		width: 110px !important;
+		height: 27px !important;
+		font-size: 9px;
+
+	}
+	footer .email .module-content div button{
+		height: 27px;
+		width: 31px;
+		margin-top: -2px;
+	}
+	footer .email .module-content div button img{
+		max-width: 22px;
+
+		margin-left: -4px;
+	}
+	.col-md-3.col-sm-12.col-xs-12.Zdenko.pt-2{
+
+	}
+}
+@media (max-width: 767px){
+	 .nav-side-menu {
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px !important;
+    margin-bottom: 10px;
+	}
+	.title-header{
+		text-align: center !important;
+	}
+	button.pull-right.btn.waves-effect.waves-light{
+		float: none !important;
+	}
+}
+@media (max-width: 320px){
+	.hoso ul li.ml{
+		margin-left: 0px !important;
+	}
+}
